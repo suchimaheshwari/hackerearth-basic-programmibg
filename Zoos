@@ -1,0 +1,24 @@
+      import java.util.*;
+class TestClass {
+    public static void main(String args[] ) {
+Scanner input=new Scanner(System.in);
+String s=input.next();
+if(s.length()>20)
+return;
+HashMap<Character,Integer> h=new HashMap<>();
+for(int i=0;i<s.length();i++){
+	if(h.containsKey(s.charAt(i)))
+   h.put(s.charAt(i),h.get(s.charAt(i))+1);
+    else{
+	h.put(s.charAt(i),1);}
+}
+int zcount=h.get('z');
+int ocount=h.get('o');
+if(2*zcount==ocount){
+System.out.println("Yes");
+}
+else{
+	System.out.println("No");
+}}}
+
+    
